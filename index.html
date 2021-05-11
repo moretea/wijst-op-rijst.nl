@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <!-- Ha, leuke grap? wil je 'm verbeteren? Maak een PR op https://github.com/moretea/wijst-op-rijst.nl-->
+    <head>
+        <title>Wijst op rijst!</title>
+     <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Wijst op rijst!</h1>
+        <center>
+        <img id="i"/>
+        <footer>
+            <p>Je wilt natuurlijk gewoon <a href="http://wijsopreis.nl">wijs op reis.nl</a> bezoeken. Doei!</p>
+            <p>Deze site is bedoelt als woordgrapje, zonder bijbedoelingen.</p>
+            <p><a href="sources.html">Bronvermeldingen van afbeeldingen</a></p>
+        </footer>
+        </center>
+        <style>
+          @font-face {
+              font-family: BubblegumSans;
+              src: url("BubblegumSans-Regular.otf") format("opentype");
+          }
+
+          h1 {
+              font-family: BubblegumSans,sans-serif;
+              font-size: 5em;
+              text-align: center;
+          }
+
+          footer {
+              font-size:0.5em;
+          }
+        </style>
+
+        <script>
+           var pics = ["rutte1.jpg", "rutte2.jpg", "rutte3.jpg", "rutte4.jpg", "hugo1.jpg"];
+          function swap() {
+              var img = pics[Math.floor(Math.random()*pics.length)];
+              document.getElementById("i").src = img;
+          }
+          swap();
+          setInterval(swap, 3000);
+        </script>
+    </body>
+</html>
